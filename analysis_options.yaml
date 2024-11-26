@@ -1,0 +1,14 @@
+include: package:pedantic_mono/analysis_options.yaml
+analyzer:
+  exclude:
+    - lib/**/*.g.dart
+linter:
+  rules:
+    use_setters_to_change_properties: false
+    avoid_catches_without_on_clauses: false
+    avoid_positional_boolean_parameters: false
+    sort_pub_dependencies: false
+    always_use_package_imports: false # 相対パスを利用するため
+    lines_longer_than_80_chars: false # いろんな種類のボイラプレートまとめるためにはどうしてもクラス名が長くなってしまうため
+    public_member_api_docs: false # doc記入は省略させていただきます
+    prefer_constructors_over_static_methods: false # static関数で変換処理を実装したいため
