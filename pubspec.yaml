@@ -19,17 +19,21 @@ dependencies:
 
   flutter_config: ^2.0.2
 
+  json_annotation: ^4.9.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  pedantic_mono:
+  pedantic_mono: ^1.29.0
 
   flutter_gen_runner: ^5.8.0
 
   build_runner: ^2.4.13
 
+  json_serializable: ^6.9.0
+
 flutter:
   uses-material-design: true
   assets:
-     - assets/json/prefectures.geojson
+     - assets/json/

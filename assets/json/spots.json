@@ -1,0 +1,1526 @@
+[
+  {
+    "business_status": "OPERATIONAL",
+    "geometry": {
+      "location": {
+        "lat": 34.7059395,
+        "lng": 135.4944408
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 34.70730077989273,
+          "lng": 135.4960277298927
+        },
+        "southwest": {
+          "lat": 34.70460112010728,
+          "lng": 135.4933280701073
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+    "icon_background_color": "#FF9E67",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
+    "name": "Mercedes me Osaka / DOWNSTAIRS COFFEE",
+    "opening_hours": {
+      "open_now": true
+    },
+    "photos": [
+      {
+        "height": 3024,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/108868372341354094623\">さきはらだ</a>"
+        ],
+        "photo_reference": "AdDdOWq9STDRTtnIw2KPzFb1U6PAsd2okfPfGF5NB5m6JU63Z6YD_zmOhK_hwQB0VLYYGy45L28PL24rMcMQF7G1U3oEoDPtIdQHAmNOgYtlaiiInSEMEaYdspsmj9CE1hfZmMECM5tbV0hsGbNVW76_UbxeQiA7vEv_NFapaQB6IXiqc0t_",
+        "width": 4032
+      }
+    ],
+    "place_id": "ChIJazFOcI7mAGAR0WmNISVKaKQ",
+    "plus_code": {
+      "compound_code": "PF4V+9Q 大阪市、大阪府",
+      "global_code": "8Q6QPF4V+9Q"
+    },
+    "rating": 4.1,
+    "reference": "ChIJazFOcI7mAGAR0WmNISVKaKQ",
+    "scope": "GOOGLE",
+    "types": [
+      "cafe",
+      "food",
+      "store",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 230,
+    "vicinity": "大阪市北区大深町３−１ グランフロント大阪 ナレッジキャピタル 1F",
+    "detail": {
+      "geometry": {
+        "location": {
+          "lat": 34.7059395,
+          "lng": 135.4944408
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 34.70729993029151,
+            "lng": 135.4960268802915
+          },
+          "southwest": {
+            "lat": 34.70460196970851,
+            "lng": 135.4933289197085
+          }
+        }
+      },
+      "name": "Mercedes me Osaka / DOWNSTAIRS COFFEE",
+      "rating": 4.1,
+      "url": "https://maps.google.com/?cid=11846800343135250897",
+      "website": "https://www.transit-web.com/content/shops/downstairs-coffee/downstairs_osaka/"
+    }
+  },
+  {
+    "business_status": "OPERATIONAL",
+    "geometry": {
+      "location": {
+        "lat": 34.703852,
+        "lng": 135.4977556
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 34.70530807989272,
+          "lng": 135.4990805298927
+        },
+        "southwest": {
+          "lat": 34.70260842010727,
+          "lng": 135.4963808701073
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+    "icon_background_color": "#FF9E67",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
+    "name": "ドトールコーヒーショップ 新梅田食道街店",
+    "opening_hours": {
+      "open_now": true
+    },
+    "photos": [
+      {
+        "height": 2268,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/116952607600373573716\">Kotomi Hata</a>"
+        ],
+        "photo_reference": "AdDdOWqmXYyYc9uvpTJ1-HdsUQ1nQRj6DhWlaUi3d-wssAiIbXIZVEPgmh2t5fQfGX5R52yXpfccUvw0yQFtKFc7jYGrILqnFzNGuvVhF3LjsAQjq6KU3h9Uoz1yauWV7t2XuB_LzLGL8KH-Ca2l4aggNKdIBSKvcCEFxHaQmTkROROM_5kl",
+        "width": 4032
+      }
+    ],
+    "place_id": "ChIJZaJt4aTnAGARZ64ayKhjggM",
+    "plus_code": {
+      "compound_code": "PF3X+G4 大阪市、大阪府",
+      "global_code": "8Q6QPF3X+G4"
+    },
+    "rating": 4,
+    "reference": "ChIJZaJt4aTnAGARZ64ayKhjggM",
+    "scope": "GOOGLE",
+    "types": [
+      "cafe",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 128,
+    "vicinity": "大阪市北区角田町９−２６",
+    "detail": {
+      "geometry": {
+        "location": {
+          "lat": 34.70385199999999,
+          "lng": 135.4977556
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 34.7053072302915,
+            "lng": 135.4990796802915
+          },
+          "southwest": {
+            "lat": 34.7026092697085,
+            "lng": 135.4963817197085
+          }
+        }
+      },
+      "name": "ドトールコーヒーショップ 新梅田食道街店",
+      "rating": 4,
+      "url": "https://maps.google.com/?cid=252874105649016423",
+      "website": "https://www.doutor.co.jp/dcs/"
+    }
+  },
+  {
+    "business_status": "OPERATIONAL",
+    "geometry": {
+      "location": {
+        "lat": 34.6988139,
+        "lng": 135.4971055
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 34.70038042989272,
+          "lng": 135.4982179298927
+        },
+        "southwest": {
+          "lat": 34.69768077010728,
+          "lng": 135.4955182701073
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+    "icon_background_color": "#FF9E67",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
+    "name": "キッサモクバ",
+    "opening_hours": {
+      "open_now": true
+    },
+    "photos": [
+      {
+        "height": 480,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/117866302702974515137\">A Google User</a>"
+        ],
+        "photo_reference": "AdDdOWpqGtKkvyXQGGl8dIsv9QrCXgPus6h2rZWcm-lym-rgtIXXc8pVjdvuvNN2cWPJqICdjoN4bbcdU78dWYaQ3cjwgo7XadHTOgNNElVdk6_kZ53qskcTE_-kEB_FM81LR8_62gb-7OApwkOxjLpcjr4o9RFcmJ5HHSV2RHi_EtgyX9Vk",
+        "width": 720
+      }
+    ],
+    "place_id": "ChIJH3TKoPLmAGARnamEvjHJArM",
+    "plus_code": {
+      "compound_code": "MFXW+GR 大阪市、大阪府",
+      "global_code": "8Q6QMFXW+GR"
+    },
+    "price_level": 2,
+    "rating": 4.4,
+    "reference": "ChIJH3TKoPLmAGARnamEvjHJArM",
+    "scope": "GOOGLE",
+    "types": [
+      "cafe",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 172,
+    "vicinity": "大阪市北区梅田１丁目３−１ 大阪駅前第１ビル B2",
+    "detail": {
+      "geometry": {
+        "location": {
+          "lat": 34.69881389999999,
+          "lng": 135.4971055
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 34.7003795802915,
+            "lng": 135.4982170802915
+          },
+          "southwest": {
+            "lat": 34.6976816197085,
+            "lng": 135.4955191197085
+          }
+        }
+      },
+      "name": "キッサモクバ",
+      "rating": 4.4,
+      "url": "https://maps.google.com/?cid=12899093498229467549",
+      "website": "https://instagram.com/kissa_mokuba"
+    }
+  },
+  {
+    "business_status": "OPERATIONAL",
+    "geometry": {
+      "location": {
+        "lat": 34.7033509,
+        "lng": 135.4944039
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 34.70473577989272,
+          "lng": 135.4954776298927
+        },
+        "southwest": {
+          "lat": 34.70203612010728,
+          "lng": 135.4927779701073
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+    "icon_background_color": "#FF9E67",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
+    "name": "24/7 café apartment 梅田",
+    "opening_hours": {
+      "open_now": true
+    },
+    "photos": [
+      {
+        "height": 420,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/102393989274258041137\">24/7 cafe apartment umeda</a>"
+        ],
+        "photo_reference": "AdDdOWqZwtqSsSy4SCy1nLliEH9TCJA4FCeEphfAuDvam_bafKm3nMgDtwI_iNN1kN5-kuT6JNv_uztPq0ngvqjE2cj5Z-qW2W8F-b4EgaNs6ZgW1n0laNHSyQqIk-XapPjit5SfsKbDStqNhTesCbG2tlTANmhytupnavpu14ANkwAmqXQb",
+        "width": 960
+      }
+    ],
+    "place_id": "ChIJGylOgY7mAGARGG0yVjK4k5g",
+    "plus_code": {
+      "compound_code": "PF3V+8Q 大阪市、大阪府",
+      "global_code": "8Q6QPF3V+8Q"
+    },
+    "price_level": 2,
+    "rating": 3.9,
+    "reference": "ChIJGylOgY7mAGARGG0yVjK4k5g",
+    "scope": "GOOGLE",
+    "types": [
+      "cafe",
+      "restaurant",
+      "food",
+      "store",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 250,
+    "vicinity": "大阪市北区大深町４−１ グランフロント大阪ショップ＆レストラン うめきた広場B1F",
+    "detail": {
+      "geometry": {
+        "location": {
+          "lat": 34.7033509,
+          "lng": 135.4944039
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 34.7047349302915,
+            "lng": 135.4954767802915
+          },
+          "southwest": {
+            "lat": 34.7020369697085,
+            "lng": 135.4927788197085
+          }
+        }
+      },
+      "name": "24/7 café apartment 梅田",
+      "rating": 3.9,
+      "url": "https://maps.google.com/?cid=10994333641675533592",
+      "website": "https://www.dd-holdings.jp/shops/247/umeda#/?utm_source=mybusiness&utm_medium=google"
+    }
+  },
+  {
+    "business_status": "OPERATIONAL",
+    "geometry": {
+      "location": {
+        "lat": 34.7034236,
+        "lng": 135.4941943
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 34.70479912989273,
+          "lng": 135.4954235298927
+        },
+        "southwest": {
+          "lat": 34.70209947010728,
+          "lng": 135.4927238701073
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+    "icon_background_color": "#FF9E67",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
+    "name": "ALL DAY COFFEE",
+    "opening_hours": {
+      "open_now": true
+    },
+    "photos": [
+      {
+        "height": 348,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/107603122279853938947\">オール デイ コーヒーALL DAY COFFEE</a>"
+        ],
+        "photo_reference": "AdDdOWqAoOr7rZKK4HhxSe85AEZFRpS0fkyo7DGeM1TpqW5wkmKasYZ3vDFUOUthbOqEsoV1jbL_G8pADxHn2uWxNdeTfNKPj6ZY4e5EgUHQOF-I_ElB5U9ojVuGEzsi7MT8Wj_xNTCxKk7cHrIJYg9Zn3xuL3RXvSonqYCTiCltxCQHmcQF",
+        "width": 592
+      }
+    ],
+    "place_id": "ChIJbToPwI7mAGARCZttQq8w-CU",
+    "plus_code": {
+      "compound_code": "PF3V+9M 大阪市、大阪府",
+      "global_code": "8Q6QPF3V+9M"
+    },
+    "rating": 3.8,
+    "reference": "ChIJbToPwI7mAGARCZttQq8w-CU",
+    "scope": "GOOGLE",
+    "types": [
+      "cafe",
+      "restaurant",
+      "food",
+      "store",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 218,
+    "vicinity": "大阪市北区大深町４−１ うめきた広場 B1F",
+    "detail": {
+      "geometry": {
+        "location": {
+          "lat": 34.70342360000001,
+          "lng": 135.4941943
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 34.70479828029151,
+            "lng": 135.4954226802915
+          },
+          "southwest": {
+            "lat": 34.70210031970851,
+            "lng": 135.4927247197085
+          }
+        }
+      },
+      "name": "ALL DAY COFFEE",
+      "rating": 3.8,
+      "url": "https://maps.google.com/?cid=2735990302919465737",
+      "website": "http://www.transit-web.com/shop/all_day_coffee/"
+    }
+  },
+  {
+    "business_status": "OPERATIONAL",
+    "geometry": {
+      "location": {
+        "lat": 34.7029954,
+        "lng": 135.4952921
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 34.70463367989272,
+          "lng": 135.4968799298927
+        },
+        "southwest": {
+          "lat": 34.70193402010728,
+          "lng": 135.4941802701073
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+    "icon_background_color": "#FF9E67",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
+    "name": "タリーズコーヒー 大阪ステーションシティ店",
+    "opening_hours": {
+      "open_now": true
+    },
+    "photos": [
+      {
+        "height": 1536,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/113903968544091369109\">Hiroshi M</a>"
+        ],
+        "photo_reference": "AdDdOWrH-pIoHK61cKX0YjVZ3r87NDJw56ViYqD98u8FYGpLmlOyvM_f5mh1sRLlLwFRsmDy_ypeP-AqTQan_yvxvOeiQBh_Ot2qKXFIAeueRt8VQ4y9DxgJAbgHbxGFeGDpA-RvoA-6gBhNZMmcNSFhrsS75oZ8bwMiyE7og_LvNpVWAzw4",
+        "width": 2048
+      }
+    ],
+    "place_id": "ChIJmd3tYpLmAGARx_0QJBsb8oc",
+    "plus_code": {
+      "compound_code": "PF3W+54 大阪市、大阪府",
+      "global_code": "8Q6QPF3W+54"
+    },
+    "price_level": 2,
+    "rating": 3.7,
+    "reference": "ChIJmd3tYpLmAGARx_0QJBsb8oc",
+    "scope": "GOOGLE",
+    "types": [
+      "cafe",
+      "food",
+      "store",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 103,
+    "vicinity": "大阪市北区梅田３丁目１−３ ノースゲートビル 11F",
+    "detail": {
+      "editorial_summary": {
+        "language": "ja",
+        "overview": "カフェのチェーン店。多彩なロースト コーヒー、紅茶、スムージーのほか、ペイストリーや軽食も提供。"
+      },
+      "geometry": {
+        "location": {
+          "lat": 34.7029954,
+          "lng": 135.4952921
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 34.70463283029149,
+            "lng": 135.4968790802915
+          },
+          "southwest": {
+            "lat": 34.7019348697085,
+            "lng": 135.4941811197085
+          }
+        }
+      },
+      "name": "タリーズコーヒー 大阪ステーションシティ店",
+      "rating": 3.7,
+      "url": "https://maps.google.com/?cid=9795921942867410375",
+      "website": "https://shop.tullys.co.jp/detail/1530625?utm_source=google&utm_medium=gbp&utm_campaign=map"
+    }
+  },
+  {
+    "business_status": "OPERATIONAL",
+    "geometry": {
+      "location": {
+        "lat": 34.7006768,
+        "lng": 135.4984927
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 34.70182097989272,
+          "lng": 135.4999347798927
+        },
+        "southwest": {
+          "lat": 34.69912132010728,
+          "lng": 135.4972351201073
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+    "icon_background_color": "#FF9E67",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
+    "name": "TAG-COFFEE STAN(D) T・ジョイ梅田",
+    "opening_hours": {
+      "open_now": true
+    },
+    "photos": [
+      {
+        "height": 683,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/116499687856777443094\">madomadcity</a>"
+        ],
+        "photo_reference": "AdDdOWqQD6WNejeGFI7Ac3izCAEkbpOP8IG5NWaIIwUttbum2mDtgZISaYHwpJdHNLyhTvVjNvI-dDtIMXehBbZsp93Jl-jgm9e66qAZNktYJMCMZu8EzfxJanXnsGI3KQZcTaNU2dFKq72noh9L6lRh3Ok_dt7BCOwAe9EJWHksNHrmgT9R",
+        "width": 1024
+      }
+    ],
+    "place_id": "ChIJu_m_o4PnAGARkoYjfIEO-YI",
+    "plus_code": {
+      "compound_code": "PF2X+79 大阪市、大阪府",
+      "global_code": "8Q6QPF2X+79"
+    },
+    "rating": 4.6,
+    "reference": "ChIJu_m_o4PnAGARkoYjfIEO-YI",
+    "scope": "GOOGLE",
+    "types": [
+      "cafe",
+      "food",
+      "store",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 5,
+    "vicinity": "大阪市北区梅田１丁目１２−６ Ｅ～ｍａ 7F",
+    "detail": {
+      "geometry": {
+        "location": {
+          "lat": 34.7006768,
+          "lng": 135.4984927
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 34.7018201302915,
+            "lng": 135.4999339302915
+          },
+          "southwest": {
+            "lat": 34.6991221697085,
+            "lng": 135.4972359697085
+          }
+        }
+      },
+      "name": "TAG-COFFEE STAN(D) T・ジョイ梅田",
+      "rating": 4.6,
+      "url": "https://maps.google.com/?cid=9437590443427858066",
+      "website": "http://tag-coffee-stand.jp/"
+    }
+  },
+  {
+    "business_status": "OPERATIONAL",
+    "geometry": {
+      "location": {
+        "lat": 34.7036675,
+        "lng": 135.5008261
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 34.70506677989273,
+          "lng": 135.5021507798927
+        },
+        "southwest": {
+          "lat": 34.70236712010728,
+          "lng": 135.4994511201072
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+    "icon_background_color": "#FF9E67",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
+    "name": "コメダ珈琲店 梅田HEP通店",
+    "opening_hours": {
+      "open_now": true
+    },
+    "photos": [
+      {
+        "height": 4032,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/104230051538838914487\">Lo</a>"
+        ],
+        "photo_reference": "AdDdOWq3v7MXRQGkZb2X1r_XMKJnIaXQgksNaa51--TVpy1wq9IcAjtFo1yBUmcKyPvu7bBqQcoCsB8BeZUZYuAmMyZgqnnF7gt8pvllPlvDmjIkDzNun_Q718m3OOHbDCehksGfKkhIDCJXMRzMjE1uXePEPwcqOpd51g-RpIV8XMlSiJ93",
+        "width": 3024
+      }
+    ],
+    "place_id": "ChIJIxs5ZvrnAGARijBF5r9UczY",
+    "plus_code": {
+      "compound_code": "PG32+F8 大阪市、大阪府",
+      "global_code": "8Q6QPG32+F8"
+    },
+    "price_level": 2,
+    "rating": 4,
+    "reference": "ChIJIxs5ZvrnAGARijBF5r9UczY",
+    "scope": "GOOGLE",
+    "types": [
+      "cafe",
+      "food",
+      "store",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 122,
+    "vicinity": "大阪市北区角田町６−２ ラッキービル 2F",
+    "detail": {
+      "geometry": {
+        "location": {
+          "lat": 34.70366749999999,
+          "lng": 135.5008261
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 34.7050659302915,
+            "lng": 135.5021499302915
+          },
+          "southwest": {
+            "lat": 34.7023679697085,
+            "lng": 135.4994519697085
+          }
+        }
+      },
+      "name": "コメダ珈琲店 梅田HEP通店",
+      "rating": 4,
+      "url": "https://maps.google.com/?cid=3923572883548614794",
+      "website": "https://www.komeda.co.jp/shop/detail.html?id=1093"
+    }
+  },
+  {
+    "business_status": "OPERATIONAL",
+    "geometry": {
+      "location": {
+        "lat": 34.7014363,
+        "lng": 135.4982636
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 34.70289777989272,
+          "lng": 135.4995790798927
+        },
+        "southwest": {
+          "lat": 34.70019812010728,
+          "lng": 135.4968794201073
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+    "icon_background_color": "#FF9E67",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
+    "name": "喫茶室 KOHORO（コホロ） 阪神梅田本店7F",
+    "opening_hours": {
+      "open_now": true
+    },
+    "photos": [
+      {
+        "height": 4032,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/101968612901041027963\">西岡伸悟</a>"
+        ],
+        "photo_reference": "AdDdOWppUQ6c7kEWYbT4YPEmqj6zRA7CRjBWcar3YiGGvSg6qlcFQigzM3rxcZUpShQTL6YJ7bdkyBldiXNJCdF7dsi-Lg_VMyw2RoEoHxPYvlxVIy5aaQGtRyWYUlAvG7GObUzrO19HDUmH3GC78ee6N10r4KBuTBUN-6n7WZ3bz8_K_mbX",
+        "width": 3024
+      }
+    ],
+    "place_id": "ChIJaT8pBYLnAGARtmPwN-czqeU",
+    "plus_code": {
+      "compound_code": "PF2X+H8 大阪市、大阪府",
+      "global_code": "8Q6QPF2X+H8"
+    },
+    "rating": 3.9,
+    "reference": "ChIJaT8pBYLnAGARtmPwN-czqeU",
+    "scope": "GOOGLE",
+    "types": [
+      "cafe",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 57,
+    "vicinity": "大阪市北区梅田１丁目１３−１３ 7F 阪神梅田本店",
+    "detail": {
+      "geometry": {
+        "location": {
+          "lat": 34.7014363,
+          "lng": 135.4982636
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 34.7028969302915,
+            "lng": 135.4995782302915
+          },
+          "southwest": {
+            "lat": 34.7001989697085,
+            "lng": 135.4968802697085
+          }
+        }
+      },
+      "name": "喫茶室 KOHORO（コホロ） 阪神梅田本店7F",
+      "rating": 3.9,
+      "url": "https://maps.google.com/?cid=16548815373918561206",
+      "website": "https://www.hanshin-dept.jp/hshonten/restaurantguide/cafe08.html/"
+    }
+  },
+  {
+    "business_status": "OPERATIONAL",
+    "geometry": {
+      "location": {
+        "lat": 34.7002868,
+        "lng": 135.500061
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 34.70160787989272,
+          "lng": 135.5012963798927
+        },
+        "southwest": {
+          "lat": 34.69890822010728,
+          "lng": 135.4985967201072
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+    "icon_background_color": "#FF9E67",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
+    "name": "喫茶サンシャイン",
+    "opening_hours": {
+      "open_now": true
+    },
+    "photos": [
+      {
+        "height": 3456,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/108630754643271114262\">サンシャイン</a>"
+        ],
+        "photo_reference": "AdDdOWrfW3EMSx4b2qMbUpre4iC3vg0e5w6yTl_gKnXtgFzmXPCjBZfFB2gW1AtSXa29K4oI-ZvLBR-2_c2KOuDaN9AQiBfxM41X4iZwxxmcJjIumpjxnn8r86ftT8ubJNVMU6hb37NZvsrP3xXUkXOHuYvFNA-_v1FC7wmYMdQxYr8Pc-lu",
+        "width": 5184
+      }
+    ],
+    "place_id": "ChIJpToQwuzmAGAR5yRA6Ki8YL0",
+    "plus_code": {
+      "compound_code": "PG22+42 大阪市、大阪府",
+      "global_code": "8Q6QPG22+42"
+    },
+    "price_level": 2,
+    "rating": 4.1,
+    "reference": "ChIJpToQwuzmAGAR5yRA6Ki8YL0",
+    "scope": "GOOGLE",
+    "types": [
+      "cafe",
+      "food",
+      "store",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 970,
+    "vicinity": "大阪市北区曾根崎２丁目１１−８ 大阪日興ビル地下２階",
+    "detail": {
+      "editorial_summary": {
+        "language": "ja",
+        "overview": "地下にあるレトロなカフェ。自家焙煎のコーヒー、軽食、手焼きのホットケーキを楽しめる。"
+      },
+      "geometry": {
+        "location": {
+          "lat": 34.7002868,
+          "lng": 135.500061
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 34.7016070302915,
+            "lng": 135.5012955302915
+          },
+          "southwest": {
+            "lat": 34.6989090697085,
+            "lng": 135.4985975697085
+          }
+        }
+      },
+      "name": "喫茶サンシャイン",
+      "rating": 4.1,
+      "url": "https://maps.google.com/?cid=13646114304569648359",
+      "website": "http://www.kissa-sunshine.jp/"
+    }
+  },
+  {
+    "business_status": "OPERATIONAL",
+    "geometry": {
+      "location": {
+        "lat": 34.7045813,
+        "lng": 135.4881589
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 34.70593647989272,
+          "lng": 135.4894975298927
+        },
+        "southwest": {
+          "lat": 34.70323682010728,
+          "lng": 135.4867978701073
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+    "icon_background_color": "#FF9E67",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+    "name": "発酵cafe kimi",
+    "opening_hours": {
+      "open_now": true
+    },
+    "photos": [
+      {
+        "height": 3024,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/113335162485569867383\">A Google User</a>"
+        ],
+        "photo_reference": "AdDdOWpCPQkZUJe-LBU9wLhayMBmZJjKzwWeRWkPET8n0TgV_ZgvWFNz3KMZoHgt1Gq3t72jdRUQxgsIzGaS6jcWHgUOposCtw1Fo3kby60th6OjratBccHjvHB2FSKEbflRTxJhHFkeCeGk3vojOqKeg98U_e4MfETPUCttmkuhP9kOCVX4",
+        "width": 4032
+      }
+    ],
+    "place_id": "ChIJz1JTD4jmAGARDCydSuHC0TQ",
+    "plus_code": {
+      "compound_code": "PF3Q+R7 大阪市、大阪府",
+      "global_code": "8Q6QPF3Q+R7"
+    },
+    "price_level": 2,
+    "rating": 4.4,
+    "reference": "ChIJz1JTD4jmAGARDCydSuHC0TQ",
+    "scope": "GOOGLE",
+    "types": [
+      "cafe",
+      "restaurant",
+      "food",
+      "store",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 50,
+    "vicinity": "大阪市北区大淀中１丁目１２−１８ シャトー大淀",
+    "detail": {
+      "geometry": {
+        "location": {
+          "lat": 34.7045411,
+          "lng": 135.4881559
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 34.7059356302915,
+            "lng": 135.4894966802915
+          },
+          "southwest": {
+            "lat": 34.7032376697085,
+            "lng": 135.4867987197085
+          }
+        }
+      },
+      "name": "発酵cafe kimi",
+      "rating": 4.4,
+      "url": "https://maps.google.com/?cid=3806037432980024332",
+      "website": "https://www.instagram.com/kimi_hakko.cafe"
+    }
+  },
+  {
+    "business_status": "OPERATIONAL",
+    "geometry": {
+      "location": {
+        "lat": 34.7011375,
+        "lng": 135.4997105
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 34.70264317989272,
+          "lng": 135.5009942298927
+        },
+        "southwest": {
+          "lat": 34.69994352010728,
+          "lng": 135.4982945701073
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+    "icon_background_color": "#FF9E67",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
+    "name": "キミエール",
+    "opening_hours": {
+      "open_now": true
+    },
+    "photos": [
+      {
+        "height": 1744,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/100842908340816040953\">A Google User</a>"
+        ],
+        "photo_reference": "AdDdOWpdUkJvUvb7vcAs_ZsZqU_bPyVLLqGQpSCemHO0Ld9-YYzp3iZEEsPgSX40FflpHrLI_C5JKNzlajRiiOP5zxqAgzumkYQi9yDUO2mdp92lRGXtl1BV2HyM-kLruk7yoZfCujxB9GKMNBVnVQkwdXz9Xw5ZnBoAQDQIv1S9EWq2hb4Y",
+        "width": 2370
+      }
+    ],
+    "place_id": "ChIJpaonO2_nAGARv6JNgGFzku0",
+    "plus_code": {
+      "compound_code": "PF2X+FV 大阪市、大阪府",
+      "global_code": "8Q6QPF2X+FV"
+    },
+    "price_level": 2,
+    "rating": 3.9,
+    "reference": "ChIJpaonO2_nAGARv6JNgGFzku0",
+    "scope": "GOOGLE",
+    "types": [
+      "cafe",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 171,
+    "vicinity": "大阪市北区曾根崎２丁目１２−7B1",
+    "detail": {
+      "geometry": {
+        "location": {
+          "lat": 34.7011375,
+          "lng": 135.4997105
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 34.7026423302915,
+            "lng": 135.5009933802915
+          },
+          "southwest": {
+            "lat": 34.6999443697085,
+            "lng": 135.4982954197085
+          }
+        }
+      },
+      "name": "キミエール",
+      "rating": 3.9,
+      "url": "https://maps.google.com/?cid=17118871996190270143"
+    }
+  },
+  {
+    "business_status": "OPERATIONAL",
+    "geometry": {
+      "location": {
+        "lat": 34.7006219,
+        "lng": 135.4941733
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 34.70178722989272,
+          "lng": 135.4956546298927
+        },
+        "southwest": {
+          "lat": 34.69908757010728,
+          "lng": 135.4929549701073
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+    "icon_background_color": "#FF9E67",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/bar_pinlet",
+    "name": "BLARNEY IRISH PUB & CAFE",
+    "opening_hours": {
+      "open_now": true
+    },
+    "photos": [
+      {
+        "height": 3024,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/109191076073710682520\">A Google User</a>"
+        ],
+        "photo_reference": "AdDdOWpBthlrijz15Gio1WjmvIgeHXPj8SnRfYaHGCsXFw7uKkzWf136YjTyWLnk1yH-j7-7564Yj4ZK8veQsg0YgEvLdgAZgC3nvAzCopzP9CQ7A7QeHNkZ8wwpgA1D2tTLrqHLI6OO4-_D-YnjU-sLsMykynwHoqZ7CUdkhE-VThTVrlht",
+        "width": 4032
+      }
+    ],
+    "place_id": "ChIJXReuWOnnAGAR2hGwDN-GPtQ",
+    "plus_code": {
+      "compound_code": "PF2V+6M 大阪市、大阪府",
+      "global_code": "8Q6QPF2V+6M"
+    },
+    "rating": 4.4,
+    "reference": "ChIJXReuWOnnAGAR2hGwDN-GPtQ",
+    "scope": "GOOGLE",
+    "types": [
+      "cafe",
+      "bar",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 54,
+    "vicinity": "大阪市北区梅田３丁目２−２ B1F",
+    "detail": {
+      "geometry": {
+        "location": {
+          "lat": 34.7006219,
+          "lng": 135.4941733
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 34.7017863802915,
+            "lng": 135.4956537802915
+          },
+          "southwest": {
+            "lat": 34.6990884197085,
+            "lng": 135.4929558197085
+          }
+        }
+      },
+      "name": "BLARNEY IRISH PUB & CAFE",
+      "rating": 4.4,
+      "url": "https://maps.google.com/?cid=15293809677145477594",
+      "website": "https://the-blarney-stone.com/kitte-pub/"
+    }
+  },
+  {
+    "business_status": "OPERATIONAL",
+    "geometry": {
+      "location": {
+        "lat": 34.7019259,
+        "lng": 135.5006638
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 34.70325617989273,
+          "lng": 135.5019592798927
+        },
+        "southwest": {
+          "lat": 34.70055652010728,
+          "lng": 135.4992596201073
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+    "icon_background_color": "#FF9E67",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/restaurant_pinlet",
+    "name": "ベルヴィル（belle ville) ホワイティうめだ店",
+    "opening_hours": {
+      "open_now": true
+    },
+    "photos": [
+      {
+        "height": 682,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/103620525909460564268\">A Google User</a>"
+        ],
+        "photo_reference": "AdDdOWpnmTFLBTCJVzFqp-QmBzES_7XplWS-aKiPwIZRLen3OFjBTemigeApgknCTuSjbyFoIKjbl07szWG38mOPOrGt1riegRVQYyQkvlUTSv7NFwwHSEo1lV9zsZ48sAHXH5M0zImCFcYx2bh5tA3y2g_VJtkobznEUvEDLivNwgznQJhu",
+        "width": 1024
+      }
+    ],
+    "place_id": "ChIJS35vHpPmAGAR3Be014unx74",
+    "plus_code": {
+      "compound_code": "PG22+Q7 大阪市、大阪府",
+      "global_code": "8Q6QPG22+Q7"
+    },
+    "price_level": 2,
+    "rating": 4.1,
+    "reference": "ChIJS35vHpPmAGAR3Be014unx74",
+    "scope": "GOOGLE",
+    "types": [
+      "cafe",
+      "meal_takeaway",
+      "restaurant",
+      "food",
+      "store",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 1955,
+    "vicinity": "大阪市北区小松原町 ホワイティうめだイーストモールＨ-22 梅田地下街 4-5",
+    "detail": {
+      "geometry": {
+        "location": {
+          "lat": 34.70192590000001,
+          "lng": 135.5006638
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 34.7032553302915,
+            "lng": 135.5019584302915
+          },
+          "southwest": {
+            "lat": 34.7005573697085,
+            "lng": 135.4992604697085
+          }
+        }
+      },
+      "name": "ベルヴィル（belle ville) ホワイティうめだ店",
+      "rating": 4.1,
+      "url": "https://maps.google.com/?cid=13747140606632925148",
+      "website": "https://belle-ville.net/shops/?utm_source=google&utm_medium=my_business&utm_campaign=top"
+    }
+  },
+  {
+    "business_status": "OPERATIONAL",
+    "geometry": {
+      "location": {
+        "lat": 34.7028866,
+        "lng": 135.4953236
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 34.70458097989272,
+          "lng": 135.4967923298927
+        },
+        "southwest": {
+          "lat": 34.70188132010728,
+          "lng": 135.4940926701073
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+    "icon_background_color": "#FF9E67",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
+    "name": "chano-ma 梅田",
+    "opening_hours": {
+      "open_now": true
+    },
+    "photos": [
+      {
+        "height": 1108,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/115357667518610335061\">A Google User</a>"
+        ],
+        "photo_reference": "AdDdOWpD3l7R_HqFxpV6x7zGDY0ysbxw415jVw6fugjGDOcSQA39BGvVPhWyjNwjxERE4fPQx84qBAj1xfuV7__UULZwjx9NL5OKIaQ9SXW_ZtW1OepMlC7mIX8f1INB_ObJ5PK7TN-icaVw16j9_4kfgdxsw8pGL2F8GxdGDkWvEkTfGwdm",
+        "width": 1478
+      }
+    ],
+    "place_id": "ChIJl53KyivnAGAR0iWjdSaOl88",
+    "plus_code": {
+      "compound_code": "PF3W+54 大阪市、大阪府",
+      "global_code": "8Q6QPF3W+54"
+    },
+    "price_level": 2,
+    "rating": 3.8,
+    "reference": "ChIJl53KyivnAGAR0iWjdSaOl88",
+    "scope": "GOOGLE",
+    "types": [
+      "cafe",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 82,
+    "vicinity": "大阪市北区梅田３丁目１−３ ルクア1100 5F",
+    "detail": {
+      "geometry": {
+        "location": {
+          "lat": 34.7028866,
+          "lng": 135.4953236
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 34.70458013029151,
+            "lng": 135.4967914802915
+          },
+          "southwest": {
+            "lat": 34.70188216970851,
+            "lng": 135.4940935197085
+          }
+        }
+      },
+      "name": "chano-ma 梅田",
+      "rating": 3.8,
+      "url": "https://maps.google.com/?cid=14958580983167919570",
+      "website": "https://www.dd-holdings.jp/shops/chanoma/osaka#/?utm_source=mybusiness&utm_medium=google"
+    }
+  },
+  {
+    "business_status": "OPERATIONAL",
+    "geometry": {
+      "location": {
+        "lat": 34.7004458,
+        "lng": 135.4979362
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 34.70162672989272,
+          "lng": 135.4993224298927
+        },
+        "southwest": {
+          "lat": 34.69892707010727,
+          "lng": 135.4966227701073
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+    "icon_background_color": "#FF9E67",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
+    "name": "タリーズコーヒー JRE梅田スクエアビルディング店",
+    "opening_hours": {
+      "open_now": true
+    },
+    "photos": [
+      {
+        "height": 3120,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/110463105359439841469\">A Google User</a>"
+        ],
+        "photo_reference": "AdDdOWr5ZZtjnQFOGMyS4s97b7c76t-EF6OA0XtkTEDzctCFbQFz_ZbelhoivKeAElsYXxfkKjjdW5vfIw_ziaTg6-fYw9R7iUVVJFbik-LbnqjPqHeosEEUYYjI30uu052eXC1-h9yi9qGZMkR7VdQ2BUJKjQ4mA10wnk3N5ExsreSKCWzo",
+        "width": 4160
+      }
+    ],
+    "place_id": "ChIJebjTSu3mAGARMrphZw3-q1I",
+    "plus_code": {
+      "compound_code": "PF2X+55 大阪市、大阪府",
+      "global_code": "8Q6QPF2X+55"
+    },
+    "price_level": 2,
+    "rating": 3.7,
+    "reference": "ChIJebjTSu3mAGARMrphZw3-q1I",
+    "scope": "GOOGLE",
+    "types": [
+      "cafe",
+      "food",
+      "store",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 346,
+    "vicinity": "大阪市北区梅田１丁目１２−１７ JRE梅田スクエアビル 1F",
+    "detail": {
+      "editorial_summary": {
+        "language": "ja",
+        "overview": "カフェのチェーン店。多彩なロースト コーヒー、紅茶、スムージーのほか、ペイストリーや軽食も楽しめる。"
+      },
+      "geometry": {
+        "location": {
+          "lat": 34.7004458,
+          "lng": 135.4979362
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 34.7016258802915,
+            "lng": 135.4993215802915
+          },
+          "southwest": {
+            "lat": 34.6989279197085,
+            "lng": 135.4966236197085
+          }
+        }
+      },
+      "name": "タリーズコーヒー JRE梅田スクエアビルディング店",
+      "rating": 3.7,
+      "url": "https://maps.google.com/?cid=5957134265650100786",
+      "website": "https://shop.tullys.co.jp/detail/1000053?utm_source=google&utm_medium=gbp&utm_campaign=map"
+    }
+  },
+  {
+    "business_status": "OPERATIONAL",
+    "geometry": {
+      "location": {
+        "lat": 34.705753,
+        "lng": 135.4983967
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 34.70699972989272,
+          "lng": 135.4999206298927
+        },
+        "southwest": {
+          "lat": 34.70430007010728,
+          "lng": 135.4972209701073
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+    "icon_background_color": "#FF9E67",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
+    "name": "＆coffee MAISON KAYSER 阪急三番街",
+    "opening_hours": {
+      "open_now": true
+    },
+    "photos": [
+      {
+        "height": 2448,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/104686476669872966178\">奥陽平</a>"
+        ],
+        "photo_reference": "AdDdOWp727lgZ7h7lhqJpcuw0AH0UxXtwldNU5MbrIg69uIW1Y4y0QmFP5N9Zn3uYzCVMapFTDZ_mNtTlFjCAP9sqcZlNCnCth_4oENqtSmjOcROJQJdIov9MVTSIamVx_v2mQY-o96aYsRlCu2dcE6Nr8jyi5_ONhg4dby9N8h9pD2v51Uk",
+        "width": 3264
+      }
+    ],
+    "place_id": "ChIJn_A9lJHmAGARDAG6KROI3Fg",
+    "plus_code": {
+      "compound_code": "PF4X+89 大阪市、大阪府",
+      "global_code": "8Q6QPF4X+89"
+    },
+    "price_level": 2,
+    "rating": 3.5,
+    "reference": "ChIJn_A9lJHmAGARDAG6KROI3Fg",
+    "scope": "GOOGLE",
+    "types": [
+      "cafe",
+      "food",
+      "store",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 124,
+    "vicinity": "大阪市北区芝田１丁目１−３ 阪急三番街北館 地下2階",
+    "detail": {
+      "geometry": {
+        "location": {
+          "lat": 34.70575300000001,
+          "lng": 135.4983967
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 34.7069988802915,
+            "lng": 135.4999197802915
+          },
+          "southwest": {
+            "lat": 34.7043009197085,
+            "lng": 135.4972218197085
+          }
+        }
+      },
+      "name": "＆coffee MAISON KAYSER 阪急三番街",
+      "rating": 3.5,
+      "url": "https://maps.google.com/?cid=6403142386099814668",
+      "website": "https://maisonkayser.jp/brands/and_coffee/174/"
+    }
+  },
+  {
+    "business_status": "OPERATIONAL",
+    "geometry": {
+      "location": {
+        "lat": 34.6991301,
+        "lng": 135.4990767
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 34.70052332989273,
+          "lng": 135.5004262298927
+        },
+        "southwest": {
+          "lat": 34.69782367010728,
+          "lng": 135.4977265701073
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+    "icon_background_color": "#FF9E67",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
+    "name": "珈琲店 スパニョラ",
+    "opening_hours": {
+      "open_now": true
+    },
+    "photos": [
+      {
+        "height": 1440,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/102249657513675441444\">谷口勝彦</a>"
+        ],
+        "photo_reference": "AdDdOWog2X3CJAMAqmoTSeOJQEVwp0Z_K0b8qRK1gXUQsy5YWW4vFGV72c1lPoAWiTK_NXRtY1MiG1lFXPl8VYbliqi6TM_0dfBvgz5s5qX4nmmyFHpeiOGZiBY3UrusczF-R7W2aSdIGZ2eAmEtmJ4rR3Ta5QDBeX9FYKtea1H9qEKHzaq9",
+        "width": 1920
+      }
+    ],
+    "place_id": "ChIJrYRtAO3mAGARiOfMO6oYIas",
+    "plus_code": {
+      "compound_code": "MFXX+MJ 大阪市、大阪府",
+      "global_code": "8Q6QMFXX+MJ"
+    },
+    "price_level": 2,
+    "rating": 4.2,
+    "reference": "ChIJrYRtAO3mAGARiOfMO6oYIas",
+    "scope": "GOOGLE",
+    "types": [
+      "cafe",
+      "food",
+      "store",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 285,
+    "vicinity": "大阪市北区梅田１丁目１−３ 大阪駅前第3ビル B2F",
+    "detail": {
+      "geometry": {
+        "location": {
+          "lat": 34.6991301,
+          "lng": 135.4990767
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 34.7005224802915,
+            "lng": 135.5004253802915
+          },
+          "southwest": {
+            "lat": 34.6978245197085,
+            "lng": 135.4977274197085
+          }
+        }
+      },
+      "name": "珈琲店 スパニョラ",
+      "rating": 4.2,
+      "url": "https://maps.google.com/?cid=12331164374143920008"
+    }
+  },
+  {
+    "business_status": "OPERATIONAL",
+    "geometry": {
+      "location": {
+        "lat": 34.7053141,
+        "lng": 135.4984873
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 34.70667347989272,
+          "lng": 135.4998404298927
+        },
+        "southwest": {
+          "lat": 34.70397382010728,
+          "lng": 135.4971407701073
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+    "icon_background_color": "#FF9E67",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
+    "name": "上島珈琲店 阪急三番街店",
+    "opening_hours": {
+      "open_now": true
+    },
+    "photos": [
+      {
+        "height": 3024,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/103054302099547956865\">築本侑樹</a>"
+        ],
+        "photo_reference": "AdDdOWp6W5FrQEh50rRsUpDF43gpIZDE0QKLauFVHInxEum6_XcdWYgL1kvz7y8oJ89xG-gLca-heKwCtkH_pQ_mbNPJy-Yd7gya3dz58sRxIe3pP7Rql8boH99t9IdodK8qxk5ghdFmVR5y-QNRzhAndTOcDZUKkD-g3UxoUgMfQBcUzUAK",
+        "width": 4032
+      }
+    ],
+    "place_id": "ChIJifMNiZHmAGAReKd7Sxg0j-s",
+    "plus_code": {
+      "compound_code": "PF4X+49 大阪市、大阪府",
+      "global_code": "8Q6QPF4X+49"
+    },
+    "price_level": 2,
+    "rating": 4,
+    "reference": "ChIJifMNiZHmAGAReKd7Sxg0j-s",
+    "scope": "GOOGLE",
+    "types": [
+      "cafe",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 394,
+    "vicinity": "大阪市北区芝田１丁目１−３ 阪急三番街南館 B1F",
+    "detail": {
+      "geometry": {
+        "location": {
+          "lat": 34.7053141,
+          "lng": 135.4984873
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 34.70667263029149,
+            "lng": 135.4998395802915
+          },
+          "southwest": {
+            "lat": 34.70397466970849,
+            "lng": 135.4971416197085
+          }
+        }
+      },
+      "name": "上島珈琲店 阪急三番街店",
+      "rating": 4,
+      "url": "https://maps.google.com/?cid=16973842799532943224",
+      "website": "https://shop.ufs.co.jp/ufs/spot/detail?code=3697"
+    }
+  },
+  {
+    "business_status": "OPERATIONAL",
+    "geometry": {
+      "location": {
+        "lat": 34.7026422,
+        "lng": 135.4982906
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 34.70399217989272,
+          "lng": 135.4995450798927
+        },
+        "southwest": {
+          "lat": 34.70129252010727,
+          "lng": 135.4968454201073
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+    "icon_background_color": "#FF9E67",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/cafe_pinlet",
+    "name": "丸福珈琲店阪急うめだ本店",
+    "opening_hours": {
+      "open_now": true
+    },
+    "photos": [
+      {
+        "height": 3096,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/111959507712774424431\">A Google User</a>"
+        ],
+        "photo_reference": "AdDdOWq1eyoJZjVp4RSFZih7Bm1TbpOA_zaZCoXtuX0-X56hlNxiXbaez6bOyJjN-jHWPO095uQWIB_7e_WJillIg-YWnzEp3vUVHDJo6QNeWh0gmKIPzFueWiMM3DEhMbvbbZ0fpzovAQPqBLwN60wF8eeVE16G6SvtMTy2Z_prxjlGmsDL",
+        "width": 5504
+      }
+    ],
+    "place_id": "ChIJEctC9JLmAGARmsw6cnXKjfY",
+    "plus_code": {
+      "compound_code": "PF3X+38 大阪市、大阪府",
+      "global_code": "8Q6QPF3X+38"
+    },
+    "price_level": 2,
+    "rating": 3.9,
+    "reference": "ChIJEctC9JLmAGARmsw6cnXKjfY",
+    "scope": "GOOGLE",
+    "types": [
+      "cafe",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 105,
+    "vicinity": "大阪市北区角田町８−７ 阪急うめだ本店 ９階",
+    "detail": {
+      "geometry": {
+        "location": {
+          "lat": 34.7026422,
+          "lng": 135.4982906
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 34.70399133029149,
+            "lng": 135.4995442302915
+          },
+          "southwest": {
+            "lat": 34.70129336970849,
+            "lng": 135.4968462697085
+          }
+        }
+      },
+      "name": "丸福珈琲店阪急うめだ本店",
+      "rating": 3.9,
+      "url": "https://maps.google.com/?cid=17766078710822915226",
+      "website": "http://marufukucoffeeten.com/store/one.php?st_id=267"
+    }
+  }
+]
