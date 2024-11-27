@@ -43,6 +43,8 @@ class Place {
   final int userRatingsTotal;
   final String vicinity;
   final Detail detail;
+
+  Map<String, dynamic> toJson() => _$PlaceToJson(this);
 }
 
 @JsonSerializable()
@@ -57,6 +59,8 @@ class Geometry {
 
   final Location location;
   final Viewport viewport;
+
+  Map<String, dynamic> toJson() => _$GeometryToJson(this);
 }
 
 @JsonSerializable()
@@ -71,6 +75,8 @@ class Location {
 
   final double lat;
   final double lng;
+
+  Map<String, dynamic> toJson() => _$LocationToJson(this);
 }
 
 @JsonSerializable()
@@ -85,6 +91,8 @@ class Viewport {
 
   final Location northeast;
   final Location southwest;
+
+  Map<String, dynamic> toJson() => _$ViewportToJson(this);
 }
 
 @JsonSerializable()
@@ -95,6 +103,8 @@ class OpeningHours {
       _$OpeningHoursFromJson(json);
 
   final bool openNow;
+
+  Map<String, dynamic> toJson() => _$OpeningHoursToJson(this);
 }
 
 @JsonSerializable()
@@ -112,6 +122,8 @@ class Photo {
   final List<String> htmlAttributions;
   final String photoReference;
   final int width;
+
+  Map<String, dynamic> toJson() => _$PhotoToJson(this);
 }
 
 @JsonSerializable()
@@ -126,6 +138,8 @@ class PlusCode {
 
   final String compoundCode;
   final String globalCode;
+
+  Map<String, dynamic> toJson() => _$PlusCodeToJson(this);
 }
 
 @JsonSerializable()
@@ -144,5 +158,7 @@ class Detail {
   final String name;
   final double rating;
   final String url;
-  final String website;
+  final String? website;
+
+  Map<String, dynamic> toJson() => _$DetailToJson(this);
 }

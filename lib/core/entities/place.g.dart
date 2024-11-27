@@ -119,7 +119,7 @@ Detail _$DetailFromJson(Map<String, dynamic> json) => Detail(
       name: json['name'] as String,
       rating: (json['rating'] as num).toDouble(),
       url: json['url'] as String,
-      website: json['website'] as String,
+      website: json['website'] as String?,
     );
 
 Map<String, dynamic> _$DetailToJson(Detail instance) => <String, dynamic>{
