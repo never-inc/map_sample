@@ -13,11 +13,14 @@ class $AssetsJsonGen {
   /// File path: assets/json/prefectures.geojson
   String get prefectures => 'assets/json/prefectures.geojson';
 
+  /// File path: assets/json/route.json
+  String get route => 'assets/json/route.json';
+
   /// File path: assets/json/spots.json
   String get spots => 'assets/json/spots.json';
 
   /// List of all assets
-  List<String> get values => [prefectures, spots];
+  List<String> get values => [prefectures, route, spots];
 }
 
 class Assets {

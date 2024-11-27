@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:map_sample/core/entities/place.dart';
 import 'package:map_sample/core/repositories/fetch_places.dart';
+import 'package:map_sample/core/repositories/fetch_route.dart';
 import 'package:map_sample/pages/widgets/current_location_button.dart';
 import 'package:map_sample/pages/widgets/place_tile.dart';
 import 'package:url_launcher/url_launcher_string.dart';
@@ -23,7 +24,10 @@ class _State extends State<GoogleMapPage> {
   GoogleMapController? _mapController;
 
   List<Place> _places = [];
+  Set<Polyline> _polylines = {};
+
   MarkerId? _selectedMarkerId;
+  MapType _mapType = MapType.normal;
 
   final carouselController = CarouselController();
 
@@ -32,8 +36,18 @@ class _State extends State<GoogleMapPage> {
     super.initState();
     Future(() async {
       final places = await fetchPlaces();
+      final routes = await fetchRoute();
+
       setState(() {
         _places = places;
+        _polylines = {
+          Polyline(
+            polylineId: const PolylineId('route1'),
+            points: routes.map((e) => LatLng(e.first, e.last)).toList(),
+            color: Colors.blueAccent,
+            width: 8,
+          ),
+        };
       });
     });
   }
@@ -78,6 +92,8 @@ class _State extends State<GoogleMapPage> {
             myLocationButtonEnabled: false,
             compassEnabled: false,
             mapToolbarEnabled: false,
+            mapType: _mapType,
+            polylines: _polylines,
             onMapCreated: (mapController) async {
               _mapController = mapController;
               await _mapController?.moveCamera(
