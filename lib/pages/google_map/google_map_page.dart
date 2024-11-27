@@ -18,13 +18,28 @@ class _State extends State<GoogleMapPage> {
   final defaultZoom = 15.0;
 
   GoogleMapController? _mapController;
+  Set<Marker> _markers = {};
 
   @override
   void initState() {
     super.initState();
     Future(() async {
       final places = await fetchPlaces();
-      print(places);
+      setState(() {
+        _markers = places
+            .map(
+              (e) => Marker(
+                markerId: MarkerId(e.placeId),
+                zIndex: e.rating,
+                position: LatLng(
+                  e.geometry.location.lat,
+                  e.geometry.location.lng,
+                ),
+                infoWindow: InfoWindow(title: e.name),
+              ),
+            )
+            .toSet();
+      });
     });
   }
 
@@ -45,6 +60,7 @@ class _State extends State<GoogleMapPage> {
             initialCameraPosition: CameraPosition(
               target: defaultLatLng,
             ),
+            markers: _markers,
           ),
           const Align(
             alignment: Alignment.topCenter,
