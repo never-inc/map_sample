@@ -35,7 +35,6 @@ class _State extends State<GoogleMapPage> {
                   e.geometry.location.lat,
                   e.geometry.location.lng,
                 ),
-                infoWindow: InfoWindow(title: e.name),
               ),
             )
             .toSet();
@@ -51,6 +50,8 @@ class _State extends State<GoogleMapPage> {
           GoogleMap(
             padding: const EdgeInsets.all(16),
             myLocationButtonEnabled: false,
+            compassEnabled: false,
+            mapToolbarEnabled: false,
             onMapCreated: (mapController) async {
               _mapController = mapController;
               await _mapController?.moveCamera(
