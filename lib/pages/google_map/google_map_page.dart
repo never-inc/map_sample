@@ -22,8 +22,8 @@ class _State extends State<GoogleMapPage> {
 
   GoogleMapController? _mapController;
 
-  Set<Marker> _markers = {};
   List<Place> _places = [];
+  MarkerId? _selectedMarkerId;
 
   final carouselController = CarouselController();
 
@@ -34,32 +34,42 @@ class _State extends State<GoogleMapPage> {
       final places = await fetchPlaces();
       setState(() {
         _places = places;
-        _markers = _places
-            .map(
-              (e) => Marker(
-                markerId: MarkerId(e.placeId),
-                zIndex: e.rating,
-                position: LatLng(
-                  e.geometry.location.lat,
-                  e.geometry.location.lng,
-                ),
-                onTap: () {
-                  final index = _places.indexOf(e);
-                  carouselController.animateTo(
-                    300 * index.toDouble(),
-                    duration: const Duration(milliseconds: 200),
-                    curve: Curves.bounceIn,
-                  );
-                },
-              ),
-            )
-            .toSet();
       });
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    final markers = _places
+        .map(
+          (e) => Marker(
+            markerId: MarkerId(e.placeId),
+            zIndex: e.rating,
+            icon: _selectedMarkerId?.value == e.placeId
+                ? BitmapDescriptor.defaultMarkerWithHue(
+                    BitmapDescriptor.hueAzure,
+                  )
+                : BitmapDescriptor.defaultMarker,
+            position: LatLng(
+              e.geometry.location.lat,
+              e.geometry.location.lng,
+            ),
+            onTap: () {
+              final index = _places.indexOf(e);
+              carouselController.animateTo(
+                300 * index.toDouble(),
+                duration: const Duration(milliseconds: 200),
+                curve: Curves.bounceIn,
+              );
+              setState(() {
+                final markerId = MarkerId(e.placeId);
+                _selectedMarkerId =
+                    _selectedMarkerId != markerId ? markerId : null;
+              });
+            },
+          ),
+        )
+        .toSet();
     return Scaffold(
       body: Stack(
         children: [
@@ -77,7 +87,7 @@ class _State extends State<GoogleMapPage> {
             initialCameraPosition: CameraPosition(
               target: defaultLatLng,
             ),
-            markers: _markers,
+            markers: markers,
           ),
           const Align(
             alignment: Alignment.topCenter,
@@ -105,21 +115,23 @@ class _State extends State<GoogleMapPage> {
                       );
                     },
                   ),
-                  const SizedBox(height: 8),
-                  SizedBox(
-                    height: 100,
-                    child: CarouselView(
-                      controller: carouselController,
-                      itemExtent: 300,
-                      onTap: (index) {
-                        final data = _places[index];
-                        launchUrlString(data.detail.url);
-                      },
-                      children: _places
-                          .map(
-                            (e) => PlaceTile(place: e),
-                          )
-                          .toList(),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                    child: SizedBox(
+                      height: 100,
+                      child: CarouselView(
+                        controller: carouselController,
+                        itemExtent: 300,
+                        onTap: (index) {
+                          final data = _places[index];
+                          launchUrlString(data.detail.url);
+                        },
+                        children: _places
+                            .map(
+                              (e) => PlaceTile(place: e),
+                            )
+                            .toList(),
+                      ),
                     ),
                   ),
                 ],
