@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:map_sample/core/entities/place.dart';
 import 'package:map_sample/core/repositories/fetch_places.dart';
 import 'package:map_sample/pages/widgets/current_location_button.dart';
+import 'package:map_sample/pages/widgets/place_tile.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 class GoogleMapPage extends StatefulWidget {
   const GoogleMapPage({super.key});
@@ -18,7 +21,11 @@ class _State extends State<GoogleMapPage> {
   final defaultZoom = 15.0;
 
   GoogleMapController? _mapController;
+
   Set<Marker> _markers = {};
+  List<Place> _places = [];
+
+  final carouselController = CarouselController();
 
   @override
   void initState() {
@@ -26,7 +33,8 @@ class _State extends State<GoogleMapPage> {
     Future(() async {
       final places = await fetchPlaces();
       setState(() {
-        _markers = places
+        _places = places;
+        _markers = _places
             .map(
               (e) => Marker(
                 markerId: MarkerId(e.placeId),
@@ -35,6 +43,14 @@ class _State extends State<GoogleMapPage> {
                   e.geometry.location.lat,
                   e.geometry.location.lng,
                 ),
+                onTap: () {
+                  final index = _places.indexOf(e);
+                  carouselController.animateTo(
+                    300 * index.toDouble(),
+                    duration: const Duration(milliseconds: 200),
+                    curve: Curves.bounceIn,
+                  );
+                },
               ),
             )
             .toSet();
@@ -79,6 +95,7 @@ class _State extends State<GoogleMapPage> {
             alignment: Alignment.bottomRight,
             child: SafeArea(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   CurrentLocationButton(
@@ -87,6 +104,23 @@ class _State extends State<GoogleMapPage> {
                         CameraUpdate.newLatLngZoom(defaultLatLng, defaultZoom),
                       );
                     },
+                  ),
+                  const SizedBox(height: 8),
+                  SizedBox(
+                    height: 100,
+                    child: CarouselView(
+                      controller: carouselController,
+                      itemExtent: 300,
+                      onTap: (index) {
+                        final data = _places[index];
+                        launchUrlString(data.detail.url);
+                      },
+                      children: _places
+                          .map(
+                            (e) => PlaceTile(place: e),
+                          )
+                          .toList(),
+                    ),
                   ),
                 ],
               ),
