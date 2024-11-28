@@ -10,6 +10,9 @@
 class $AssetsJsonGen {
   const $AssetsJsonGen();
 
+  /// File path: assets/json/27127__6_r.geojson
+  String get a271276R => 'assets/json/27127__6_r.geojson';
+
   /// File path: assets/json/prefectures.geojson
   String get prefectures => 'assets/json/prefectures.geojson';
 
@@ -20,7 +23,7 @@ class $AssetsJsonGen {
   String get spots => 'assets/json/spots.json';
 
   /// List of all assets
-  List<String> get values => [prefectures, route, spots];
+  List<String> get values => [a271276R, prefectures, route, spots];
 }
 
 class Assets {

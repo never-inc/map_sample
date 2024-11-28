@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:map_sample/core/entities/place.dart';
+import 'package:map_sample/core/repositories/fetch_geojson.dart';
 import 'package:map_sample/core/repositories/fetch_places.dart';
 import 'package:map_sample/core/repositories/fetch_route.dart';
 import 'package:map_sample/pages/widgets/current_location_button.dart';
@@ -25,6 +26,7 @@ class _State extends State<GoogleMapPage> {
 
   List<Place> _places = [];
   Set<Polyline> _polylines = {};
+  Set<Polygon> _polygons = {};
 
   MarkerId? _selectedMarkerId;
   MapType _mapType = MapType.normal;
@@ -37,6 +39,7 @@ class _State extends State<GoogleMapPage> {
     Future(() async {
       final places = await fetchPlaces();
       final routes = await fetchRoute();
+      final geoJsons = await fetchGeoJson();
 
       setState(() {
         _places = places;
@@ -48,42 +51,53 @@ class _State extends State<GoogleMapPage> {
             width: 8,
           ),
         };
+        _polygons = geoJsons
+            .map(
+              (e) => Polygon(
+                polygonId: PolygonId(e.id),
+                points: e.geoPoints
+                    .map((p) => LatLng(p.latitude, p.longitude))
+                    .toList(),
+                strokeWidth: 4,
+                fillColor: Colors.green.withOpacity(0.2),
+                strokeColor: Colors.green,
+              ),
+            )
+            .toSet();
       });
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    final markers = _places
-        .map(
-          (e) => Marker(
-            markerId: MarkerId(e.placeId),
-            zIndex: e.rating,
-            icon: _selectedMarkerId?.value == e.placeId
-                ? BitmapDescriptor.defaultMarkerWithHue(
-                    BitmapDescriptor.hueAzure,
-                  )
-                : BitmapDescriptor.defaultMarker,
-            position: LatLng(
-              e.geometry.location.lat,
-              e.geometry.location.lng,
-            ),
-            onTap: () {
-              final index = _places.indexOf(e);
-              carouselController.animateTo(
-                300 * index.toDouble(),
-                duration: const Duration(milliseconds: 200),
-                curve: Curves.bounceIn,
-              );
-              setState(() {
-                final markerId = MarkerId(e.placeId);
-                _selectedMarkerId =
-                    _selectedMarkerId != markerId ? markerId : null;
-              });
-            },
-          ),
-        )
-        .toSet();
+    final markers = _places.map((e) {
+      final isSelected = _selectedMarkerId?.value == e.placeId;
+      return Marker(
+        markerId: MarkerId(e.placeId),
+        zIndex: isSelected ? 100 : e.rating,
+        icon: isSelected
+            ? BitmapDescriptor.defaultMarkerWithHue(
+                BitmapDescriptor.hueAzure,
+              )
+            : BitmapDescriptor.defaultMarker,
+        position: LatLng(
+          e.geometry.location.lat,
+          e.geometry.location.lng,
+        ),
+        onTap: () {
+          final index = _places.indexOf(e);
+          carouselController.animateTo(
+            300 * index.toDouble(),
+            duration: const Duration(milliseconds: 200),
+            curve: Curves.bounceIn,
+          );
+          setState(() {
+            final markerId = MarkerId(e.placeId);
+            _selectedMarkerId = _selectedMarkerId != markerId ? markerId : null;
+          });
+        },
+      );
+    }).toSet();
     return Scaffold(
       body: Stack(
         children: [
@@ -94,6 +108,7 @@ class _State extends State<GoogleMapPage> {
             mapToolbarEnabled: false,
             mapType: _mapType,
             polylines: _polylines,
+            polygons: _polygons,
             onMapCreated: (mapController) async {
               _mapController = mapController;
               await _mapController?.moveCamera(
