@@ -4,7 +4,10 @@ import 'package:map_sample/core/entities/place.dart';
 import 'package:map_sample/core/repositories/fetch_geojson.dart';
 import 'package:map_sample/core/repositories/fetch_places.dart';
 import 'package:map_sample/core/repositories/fetch_route.dart';
+import 'package:map_sample/pages/google_map/map_style.dart';
+import 'package:map_sample/pages/google_map/menu_dialog.dart';
 import 'package:map_sample/pages/widgets/current_location_button.dart';
+import 'package:map_sample/pages/widgets/menu_button.dart';
 import 'package:map_sample/pages/widgets/place_tile.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
@@ -30,6 +33,7 @@ class _State extends State<GoogleMapPage> {
 
   MarkerId? _selectedMarkerId;
   MapType _mapType = MapType.normal;
+  MapStyle _mapStyle = MapStyle.light;
 
   final carouselController = CarouselController();
 
@@ -86,6 +90,7 @@ class _State extends State<GoogleMapPage> {
         ),
         onTap: () {
           final index = _places.indexOf(e);
+
           carouselController.animateTo(
             300 * index.toDouble(),
             duration: const Duration(milliseconds: 200),
@@ -107,6 +112,7 @@ class _State extends State<GoogleMapPage> {
             compassEnabled: false,
             mapToolbarEnabled: false,
             mapType: _mapType,
+            style: _mapStyle.style,
             polylines: _polylines,
             polygons: _polygons,
             onMapCreated: (mapController) async {
@@ -133,12 +139,34 @@ class _State extends State<GoogleMapPage> {
             ),
           ),
           Align(
-            alignment: Alignment.bottomRight,
+            alignment: Alignment.topRight,
             child: SafeArea(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 mainAxisSize: MainAxisSize.min,
                 children: [
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 8),
+                    child: MenuButton(
+                      onPressed: () {
+                        MenuDialog.show(
+                          context,
+                          mapType: _mapType,
+                          mapStyle: _mapStyle,
+                          onChangedMapType: (result) {
+                            setState(() {
+                              _mapType = result;
+                            });
+                          },
+                          onChangedMapStyle: (result) {
+                            setState(() {
+                              _mapStyle = result;
+                            });
+                          },
+                        );
+                      },
+                    ),
+                  ),
                   CurrentLocationButton(
                     onPressed: () {
                       _mapController?.animateCamera(
@@ -146,26 +174,31 @@ class _State extends State<GoogleMapPage> {
                       );
                     },
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 8),
-                    child: SizedBox(
-                      height: 100,
-                      child: CarouselView(
-                        controller: carouselController,
-                        itemExtent: 300,
-                        onTap: (index) {
-                          final data = _places[index];
-                          launchUrlString(data.detail.url);
-                        },
-                        children: _places
-                            .map(
-                              (e) => PlaceTile(place: e),
-                            )
-                            .toList(),
-                      ),
-                    ),
-                  ),
                 ],
+              ),
+            ),
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: SafeArea(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                child: SizedBox(
+                  height: 100,
+                  child: CarouselView(
+                    controller: carouselController,
+                    itemExtent: 300,
+                    onTap: (index) {
+                      final data = _places[index];
+                      launchUrlString(data.detail.url);
+                    },
+                    children: _places
+                        .map(
+                          (e) => PlaceTile(place: e),
+                        )
+                        .toList(),
+                  ),
+                ),
               ),
             ),
           ),

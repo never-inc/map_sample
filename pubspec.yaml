@@ -27,6 +27,8 @@ dependencies:
 
   geopoint: ^1.0.0
 
+  dropdown_button2: ^2.3.9
+
 dependency_overrides:
   latlong2: ^0.8.0
 
