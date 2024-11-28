@@ -5,6 +5,7 @@ import 'package:map_sample/core/repositories/fetch_geojson.dart';
 import 'package:map_sample/core/repositories/fetch_places.dart';
 import 'package:map_sample/core/repositories/fetch_route.dart';
 import 'package:map_sample/pages/google_map/map_style.dart';
+import 'package:map_sample/pages/google_map/marker_type.dart';
 import 'package:map_sample/pages/google_map/menu_dialog.dart';
 import 'package:map_sample/pages/widgets/current_location_button.dart';
 import 'package:map_sample/pages/widgets/menu_button.dart';
@@ -34,6 +35,7 @@ class _State extends State<GoogleMapPage> {
   MarkerId? _selectedMarkerId;
   MapType _mapType = MapType.normal;
   MapStyle _mapStyle = MapStyle.light;
+  MarkerType _markerType = MarkerType.normal;
 
   final carouselController = CarouselController();
 
@@ -153,6 +155,7 @@ class _State extends State<GoogleMapPage> {
                           context,
                           mapType: _mapType,
                           mapStyle: _mapStyle,
+                          markerType: _markerType,
                           onChangedMapType: (result) {
                             setState(() {
                               _mapType = result;
@@ -161,6 +164,11 @@ class _State extends State<GoogleMapPage> {
                           onChangedMapStyle: (result) {
                             setState(() {
                               _mapStyle = result;
+                            });
+                          },
+                          onChangedMarkerType: (result) {
+                            setState(() {
+                              _markerType = result;
                             });
                           },
                         );

@@ -1,0 +1,5 @@
+enum MarkerType {
+  normal,
+  custom,
+  ;
+}
