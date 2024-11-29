@@ -208,7 +208,8 @@ class _State extends State<GoogleMapPage> {
       );
     }).toSet();
 
-    final markers = customMarkers;
+    final markers =
+        _markerType == MarkerType.custom ? customMarkers : defaultMarkers;
 
     return Scaffold(
       body: Stack(
