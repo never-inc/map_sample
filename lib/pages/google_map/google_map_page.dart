@@ -37,9 +37,8 @@ class _State extends State<GoogleMapPage> {
 
   List<CafeMarker> _cafeMarkers = [];
   List<({Place place, BitmapDescriptor bitmap})> _cafeBitmapDescriptors = [];
-  CafeMarker? _selectedCafeMarker = null;
-  ({Place place, BitmapDescriptor bitmap})? _selectedCafeBitmapDescriptor =
-      null;
+  CafeMarker? _selectedCafeMarker;
+  ({Place place, BitmapDescriptor bitmap})? _selectedCafeBitmapDescriptor;
 
   MarkerId? _selectedMarkerId;
   MapType _mapType = MapType.normal;
@@ -57,8 +56,10 @@ class _State extends State<GoogleMapPage> {
       final geoJsons = await fetchGeoJson();
 
       setState(() {
+        /// デフォルトマーカー
         _places = places;
 
+        /// ルート
         _polylines = {
           Polyline(
             polylineId: const PolylineId('route1'),
@@ -67,6 +68,8 @@ class _State extends State<GoogleMapPage> {
             width: 8,
           ),
         };
+
+        /// ポリゴン
         _polygons = geoJsons
             .map(
               (e) => Polygon(
@@ -208,8 +211,10 @@ class _State extends State<GoogleMapPage> {
       );
     }).toSet();
 
-    final markers =
-        _markerType == MarkerType.custom ? customMarkers : defaultMarkers;
+    final markers = switch (_markerType) {
+      MarkerType.normal => defaultMarkers,
+      MarkerType.custom => customMarkers,
+    };
 
     return Scaffold(
       body: Stack(
