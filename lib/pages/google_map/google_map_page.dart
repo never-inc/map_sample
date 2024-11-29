@@ -1,9 +1,12 @@
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:map_sample/core/entities/place.dart';
 import 'package:map_sample/core/repositories/fetch_geojson.dart';
 import 'package:map_sample/core/repositories/fetch_places.dart';
 import 'package:map_sample/core/repositories/fetch_route.dart';
+import 'package:map_sample/core/use_cases/create_custom_marker.dart';
+import 'package:map_sample/pages/google_map/cafe_marker.dart';
 import 'package:map_sample/pages/google_map/map_style.dart';
 import 'package:map_sample/pages/google_map/marker_type.dart';
 import 'package:map_sample/pages/google_map/menu_dialog.dart';
@@ -32,6 +35,12 @@ class _State extends State<GoogleMapPage> {
   Set<Polyline> _polylines = {};
   Set<Polygon> _polygons = {};
 
+  List<CafeMarker> _cafeMarkers = [];
+  List<({Place place, BitmapDescriptor bitmap})> _cafeBitmapDescriptors = [];
+  CafeMarker? _selectedCafeMarker = null;
+  ({Place place, BitmapDescriptor bitmap})? _selectedCafeBitmapDescriptor =
+      null;
+
   MarkerId? _selectedMarkerId;
   MapType _mapType = MapType.normal;
   MapStyle _mapStyle = MapStyle.light;
@@ -49,6 +58,7 @@ class _State extends State<GoogleMapPage> {
 
       setState(() {
         _places = places;
+
         _polylines = {
           Polyline(
             polylineId: const PolylineId('route1'),
@@ -70,13 +80,47 @@ class _State extends State<GoogleMapPage> {
               ),
             )
             .toSet();
+
+        /// カスタムマーカー作成
+        _cafeMarkers = places
+            .map(
+              (e) => CafeMarker(
+                id: e.placeId,
+                globalKey: GlobalKey(),
+                title: e.detail.name,
+                rating: e.rating,
+                isSelected: false,
+              ),
+            )
+            .toList();
+        WidgetsBinding.instance.addPostFrameCallback((_) async {
+          final result = <({Place place, BitmapDescriptor bitmap})>[];
+          for (final widget in _cafeMarkers) {
+            final bitmap = await createCustomMarker(widget.globalKey);
+            if (bitmap == null) {
+              continue;
+            }
+            final id = widget.id;
+            final place = places.firstWhereOrNull((e) => e.placeId == id);
+            if (place == null) {
+              continue;
+            }
+            result.add(
+              (place: place, bitmap: bitmap),
+            );
+          }
+
+          setState(() {
+            _cafeBitmapDescriptors = result;
+          });
+        });
       });
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    final markers = _places.map((e) {
+    final defaultMarkers = _places.map((e) {
       final isSelected = _selectedMarkerId?.value == e.placeId;
       return Marker(
         markerId: MarkerId(e.placeId),
@@ -105,9 +149,72 @@ class _State extends State<GoogleMapPage> {
         },
       );
     }).toSet();
+
+    final customMarkers = _cafeBitmapDescriptors.map((e) {
+      final place = e.place;
+      final isSelected = _selectedMarkerId?.value == place.placeId;
+      return Marker(
+        markerId: MarkerId(place.placeId),
+        zIndex: isSelected ? 100 : place.rating,
+        icon: isSelected
+            ? _selectedCafeBitmapDescriptor?.bitmap ?? e.bitmap
+            : e.bitmap,
+        position: LatLng(
+          place.geometry.location.lat,
+          place.geometry.location.lng,
+        ),
+        onTap: () {
+          final index = _places.indexOf(place);
+
+          carouselController.animateTo(
+            300 * index.toDouble(),
+            duration: const Duration(milliseconds: 200),
+            curve: Curves.bounceIn,
+          );
+          setState(() {
+            final markerId = MarkerId(place.placeId);
+            final isEnabled = _selectedMarkerId != markerId;
+            _selectedMarkerId = isEnabled ? markerId : null;
+            _selectedCafeMarker = isEnabled
+                ? CafeMarker(
+                    id: place.placeId,
+                    globalKey: GlobalKey(),
+                    title: place.detail.name,
+                    rating: place.rating,
+                    isSelected: true,
+                  )
+                : null;
+            final selectedCafeMarker = _selectedCafeMarker;
+            if (selectedCafeMarker != null) {
+              WidgetsBinding.instance.addPostFrameCallback((_) async {
+                final bitmap =
+                    await createCustomMarker(selectedCafeMarker.globalKey);
+                if (bitmap == null) {
+                  return;
+                }
+
+                setState(() {
+                  _selectedCafeBitmapDescriptor = (
+                    place: place,
+                    bitmap: bitmap,
+                  );
+                });
+              });
+            } else {
+              _selectedCafeBitmapDescriptor = null;
+            }
+          });
+        },
+      );
+    }).toSet();
+
+    final markers = customMarkers;
+
     return Scaffold(
       body: Stack(
         children: [
+          if (_selectedCafeMarker != null) _selectedCafeMarker!,
+          ..._cafeMarkers,
           GoogleMap(
             padding: const EdgeInsets.all(16),
             myLocationButtonEnabled: false,
