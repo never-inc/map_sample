@@ -31,8 +31,10 @@ dependencies:
 
   collection: ^1.18.0
 
+  latlong2: ^0.9.1
+
 dependency_overrides:
-  latlong2: ^0.8.0
+  latlong2: ^0.9.1
 
 dev_dependencies:
   flutter_test:
