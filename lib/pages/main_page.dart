@@ -2,10 +2,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:map_sample/pages/flutter_map/flutter_map_page.dart';
 import 'package:map_sample/pages/google_map/google_map_page.dart';
+import 'package:map_sample/pages/mapbox/mapbox_page.dart';
 
 enum Navigation {
   googleMap('Google Map'),
   flutterMap('Flutter Map'),
+  mapbox('Mapbox'),
   ;
 
   const Navigation(this.title);
@@ -24,6 +26,13 @@ enum Navigation {
         Navigator.of(context, rootNavigator: true).push<void>(
           CupertinoPageRoute(
             builder: (_) => const FlutterMapPage(),
+            settings: RouteSettings(name: name),
+          ),
+        );
+      case Navigation.mapbox:
+        Navigator.of(context, rootNavigator: true).push<void>(
+          CupertinoPageRoute(
+            builder: (_) => const MapboxPage(),
             settings: RouteSettings(name: name),
           ),
         );
