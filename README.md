@@ -1,7 +1,15 @@
 # map_sample
 
-A new Flutter project.
+This is map sample code.
 
 ## Getting Started
 
-TODO
+```sh
+cp sample.env .env
+# Please set up map api key.
+```
+
+```sh
+flutter pub get
+flutter run
+```
