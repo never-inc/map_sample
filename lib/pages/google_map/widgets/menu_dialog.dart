@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:map_sample/pages/google_map/map_style.dart';
-import 'package:map_sample/pages/google_map/marker_type.dart';
+import 'package:map_sample/pages/google_map/enum/map_style.dart';
+import 'package:map_sample/pages/google_map/enum/marker_type.dart';
 
 class MenuDialog extends StatefulWidget {
   const MenuDialog({
