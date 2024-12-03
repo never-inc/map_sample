@@ -5,6 +5,7 @@ import 'package:map_sample/core/gen/assets.gen.dart';
 import 'package:map_sample/core/repositories/fetch_geojson.dart';
 import 'package:map_sample/core/repositories/fetch_places.dart';
 import 'package:map_sample/core/repositories/fetch_route.dart';
+import 'package:map_sample/pages/mapbox/annotation_click_listener.dart';
 import 'package:map_sample/pages/widgets/current_location_button.dart';
 import 'package:map_sample/pages/widgets/place_tile.dart';
 import 'package:mapbox_maps_flutter/mapbox_maps_flutter.dart';
@@ -18,7 +19,7 @@ class MapboxPage extends StatefulWidget {
 }
 
 class _State extends State<MapboxPage> {
-  late final MapboxMap _mapController;
+  late final MapboxMap mapboxMap;
 
   final defaultLatLng = Point(
     coordinates: Position(
@@ -27,89 +28,109 @@ class _State extends State<MapboxPage> {
     ),
   );
 
-  final defaultZoom = 13.0;
+  final defaultZoom = 14.0;
 
   List<Place> _places = [];
-  List<Polygon> _polygons = [];
-
-  int? _selectedMarkerId;
 
   final carouselController = CarouselController();
 
   @override
   Widget build(BuildContext context) {
-    // final markers = _places.mapIndexed((index, e) {
-    //   final isSelected = _selectedMarkerId == index;
-    //   final point = LatLng(
-    //     e.geometry.location.lat,
-    //     e.geometry.location.lng,
-    //   );
-    //
-    //   const fontColor = Colors.black;
-    //   const fontBorderColor = Colors.white;
-    //   const fontSize = 10.0;
-    //   return Marker(
-    //     point: point,
-    //     width: 120,
-    //     height: 72,
-    //     child: GestureDetector(
-    //       onTap: () {
-    //         carouselController.animateTo(
-    //           300 * index.toDouble(),
-    //           duration: const Duration(milliseconds: 200),
-    //           curve: Curves.bounceIn,
-    //         );
-    //         final currentZoom = _mapController.camera.zoom;
-    //         _mapController.move(point, currentZoom);
-    //         setState(() {
-    //           _selectedMarkerId = _selectedMarkerId != index ? index : null;
-    //         });
-    //       },
-    //       child: Column(
-    //         mainAxisSize: MainAxisSize.min,
-    //         children: [
-    //           Icon(
-    //             Icons.pin_drop_sharp,
-    //             size: 40,
-    //             color: isSelected ? Colors.deepPurple : Colors.redAccent,
-    //           ),
-    //           Flexible(
-    //             child: Text(
-    //               e.name,
-    //               style: const TextStyle(
-    //                 fontWeight: FontWeight.bold,
-    //                 color: fontColor,
-    //                 fontSize: fontSize,
-    //                 height: 1.3,
-    //                 shadows: [
-    //                   Shadow(
-    //                     offset: Offset(-1.5, -1.5),
-    //                     color: fontBorderColor,
-    //                   ),
-    //                   Shadow(
-    //                     offset: Offset(1.5, -1.5),
-    //                     color: fontBorderColor,
-    //                   ),
-    //                   Shadow(
-    //                     offset: Offset(1.5, 1.5),
-    //                     color: fontBorderColor,
-    //                   ),
-    //                   Shadow(
-    //                     offset: Offset(-1.5, 1.5),
-    //                     color: fontBorderColor,
-    //                   ),
-    //                 ],
-    //               ),
-    //               maxLines: 2,
-    //               textAlign: TextAlign.center,
-    //               overflow: TextOverflow.ellipsis,
-    //             ),
-    //           ),
-    //         ],
-    //       ),
-    //     ),
-    //   );
-    // }).toList();
+    /// マーカー設定
+    Future<void> setupAnnotation(List<Place> places) async {
+      final manager =
+          await mapboxMap.annotations.createPointAnnotationManager();
+      final bytes = await rootBundle.load(Assets.images.redMarker.path);
+      final image = bytes.buffer.asUint8List();
+      final options = places
+          .map(
+            (e) => PointAnnotationOptions(
+              geometry: Point(
+                coordinates: Position(
+                  e.geometry.location.lng,
+                  e.geometry.location.lat,
+                ),
+              ),
+              textField: e.name,
+              textSize: 10,
+              textOffset: [0, 2.5],
+              textLineHeight: 1.3,
+              textJustify: TextJustify.CENTER,
+              image: image,
+            ),
+          )
+          .toList();
+      await manager.createMulti(options);
+
+      manager.addOnPointAnnotationClickListener(
+        AnnotationClickListener(
+          onClick: (annotation) {
+            mapboxMap.flyTo(
+              CameraOptions(center: annotation.geometry),
+              MapAnimationOptions(duration: 500, startDelay: 0),
+            );
+
+            final index =
+                options.indexWhere((e) => e.geometry == annotation.geometry);
+            if (index >= 0) {
+              carouselController.animateTo(
+                300 * index.toDouble(),
+                duration: const Duration(milliseconds: 200),
+                curve: Curves.bounceIn,
+              );
+            }
+          },
+        ),
+      );
+    }
+
+    /// ルート設定
+    Future<void> setupRoutes(List<List<double>> routes) async {
+      final manager =
+          await mapboxMap.annotations.createPolylineAnnotationManager();
+
+      final options = [
+        PolylineAnnotationOptions(
+          geometry: LineString(
+            coordinates: routes
+                .map(
+                  (e) => Position(e.last, e.first),
+                )
+                .toList(),
+          ),
+          lineColor: Colors.blueAccent.value,
+          lineWidth: 6,
+        ),
+      ];
+
+      await manager.createMulti(options);
+    }
+
+    /// ポリゴン設定
+    Future<void> setupPolygon(List<Result> polygonList) async {
+      final manager =
+          await mapboxMap.annotations.createPolygonAnnotationManager();
+
+      final options = [
+        PolygonAnnotationOptions(
+          geometry: Polygon(
+            coordinates: polygonList
+                .map(
+                  (e) => e.geoPoints
+                      .map(
+                        (geoPoint) =>
+                            Position(geoPoint.longitude, geoPoint.latitude),
+                      )
+                      .toList(),
+                )
+                .toList(),
+          ),
+          fillColor: Colors.green.withOpacity(0.2).value,
+          fillOutlineColor: Colors.green.value,
+        ),
+      ];
+      await manager.createMulti(options);
+    }
 
     return Scaffold(
       body: Stack(
@@ -120,72 +141,28 @@ class _State extends State<MapboxPage> {
               zoom: defaultZoom,
             ),
             onMapCreated: (mapBox) async {
-              _mapController = mapBox;
+              mapboxMap = mapBox;
 
-              _mapController.scaleBar
+              mapboxMap.scaleBar
                   .updateSettings(ScaleBarSettings(enabled: false))
                   .ignore();
-              _mapController.compass
+              mapboxMap.compass
                   .updateSettings(CompassSettings(enabled: false))
                   .ignore();
 
-              final places = await fetchPlaces();
+              /// ルート
               final routes = await fetchRoute();
+              await setupRoutes(routes);
+
+              /// ポリゴン
               final geoJsons = await fetchGeoJson();
+              await setupPolygon(geoJsons);
 
-              final pointAnnotationManager = await _mapController.annotations
-                  .createPointAnnotationManager();
-              final bytes = await rootBundle.load(Assets.images.redMarker.path);
-              final image = bytes.buffer.asUint8List();
-              final options = places
-                  .map(
-                    (e) => PointAnnotationOptions(
-                      geometry: Point(
-                        coordinates: Position(
-                          e.geometry.location.lng,
-                          e.geometry.location.lat,
-                        ),
-                      ),
-                      image: image,
-                    ),
-                  )
-                  .toList();
-              await pointAnnotationManager.createMulti(options);
-
-              // pointAnnotationManager.addOnPointAnnotationClickListener(
-              //     OnPointAnnotationClickListener());
-
+              /// マーカー
+              final places = await fetchPlaces();
+              await setupAnnotation(places);
               setState(() {
-                /// デフォルトマーカー
-                // _places = places;
-
-                // /// ルート
-                // _polylines = [
-                //   Polyline(
-                //     points: routes.map((e) => LatLng(e.first, e.last)).toList(),
-                //     color: Colors.blueAccent,
-                //     strokeWidth: 8,
-                //   ),
-                // ];
-                //
-                // /// ポリゴン
-                // _polygons = geoJsons
-                //     .map(
-                //       (e) => Polygon(
-                //         color: Colors.green.withOpacity(0.2),
-                //         borderColor: Colors.green,
-                //         borderStrokeWidth: 4,
-                //         points: e.geoPoints
-                //             .map(
-                //               (geoPoint) => LatLng(
-                //                 geoPoint.latitude,
-                //                 geoPoint.longitude,
-                //               ),
-                //             )
-                //             .toList(),
-                //       ),
-                //     )
-                //     .toList();
+                _places = places;
               });
             },
           ),
@@ -210,7 +187,7 @@ class _State extends State<MapboxPage> {
                 children: [
                   CurrentLocationButton(
                     onPressed: () {
-                      _mapController.setCamera(
+                      mapboxMap.setCamera(
                         CameraOptions(center: defaultLatLng),
                       );
                     },
