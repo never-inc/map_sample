@@ -150,13 +150,13 @@ class _State extends State<MapboxPage> {
                   .updateSettings(CompassSettings(enabled: false))
                   .ignore();
 
-              /// ルート
-              final routes = await fetchRoute();
-              await setupRoutes(routes);
-
               /// ポリゴン
               final geoJsons = await fetchGeoJson();
               await setupPolygon(geoJsons);
+
+              /// ルート
+              final routes = await fetchRoute();
+              await setupRoutes(routes);
 
               /// マーカー
               final places = await fetchPlaces();
