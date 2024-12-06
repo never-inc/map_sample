@@ -143,6 +143,7 @@ class _State extends State<MapboxPage> {
             onMapCreated: (mapBox) async {
               mapboxMap = mapBox;
 
+              /// 不要なUIを非表示
               mapboxMap.scaleBar
                   .updateSettings(ScaleBarSettings(enabled: false))
                   .ignore();
