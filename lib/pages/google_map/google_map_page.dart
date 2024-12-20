@@ -221,6 +221,11 @@ class _State extends State<GoogleMapPage> {
         children: [
           if (_selectedCafeMarker != null) _selectedCafeMarker!,
           ..._cafeMarkers,
+          // ↑のマーカーを隠す
+          const ColoredBox(
+            color: Colors.black,
+            child: SizedBox.expand(),
+          ),
           GoogleMap(
             padding: const EdgeInsets.all(16),
             myLocationButtonEnabled: false,

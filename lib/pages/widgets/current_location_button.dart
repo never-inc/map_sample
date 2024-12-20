@@ -14,8 +14,6 @@ class CurrentLocationButton extends StatelessWidget {
     return FilledButton(
       style: FilledButton.styleFrom(
         shape: const CircleBorder(),
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.blueAccent,
         elevation: 2,
         minimumSize: const Size(size, size),
       ),

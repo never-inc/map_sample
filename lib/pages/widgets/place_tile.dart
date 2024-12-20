@@ -16,11 +16,13 @@ class PlaceTile extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            place.detail.name,
-            style: const TextStyle(
-              fontSize: 13,
-              fontWeight: FontWeight.bold,
+          Flexible(
+            child: Text(
+              place.detail.name,
+              style: const TextStyle(
+                fontSize: 13,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           Flexible(

@@ -11,19 +11,19 @@ PODS:
   - GoogleMaps (9.2.0):
     - GoogleMaps/Maps (= 9.2.0)
   - GoogleMaps/Maps (9.2.0)
-  - mapbox_maps_flutter (2.5.0-rc.1):
+  - mapbox_maps_flutter (2.5.0):
     - Flutter
-    - MapboxMaps (~> 11.9.0-rc.1)
-    - Turf (= 4.0.0-beta.1)
-  - MapboxCommon (24.9.0-rc.1):
-    - Turf (= 4.0.0-beta.1)
-  - MapboxCoreMaps (11.9.0-rc.1):
-    - MapboxCommon (~> 24.9.0-rc)
-  - MapboxMaps (11.9.0-rc.1):
-    - MapboxCommon (= 24.9.0-rc.1)
-    - MapboxCoreMaps (= 11.9.0-rc.1)
-    - Turf (= 4.0.0-beta.1)
-  - Turf (4.0.0-beta.1)
+    - MapboxMaps (~> 11.9.0)
+    - Turf (= 4.0.0)
+  - MapboxCommon (24.9.0):
+    - Turf (= 4.0.0)
+  - MapboxCoreMaps (11.9.0):
+    - MapboxCommon (~> 24.9)
+  - MapboxMaps (11.9.0):
+    - MapboxCommon (= 24.9.0)
+    - MapboxCoreMaps (= 11.9.0)
+    - Turf (= 4.0.0)
+  - Turf (4.0.0)
   - url_launcher_ios (0.0.1):
     - Flutter
 
@@ -61,11 +61,11 @@ SPEC CHECKSUMS:
   Google-Maps-iOS-Utils: 0a484b05ed21d88c9f9ebbacb007956edd508a96
   google_maps_flutter_ios: e31555a04d1986ab130f2b9f24b6cdc861acc6d3
   GoogleMaps: 634ec3ca99698b31ca2253d64f017217d70cfb38
-  mapbox_maps_flutter: 93690cb438321f2af9da34647971837cc3425f8e
-  MapboxCommon: 8e2385f687c0d926629edf6944bed76e97005aea
-  MapboxCoreMaps: 158ef71e718bc444b1bdfc9fd672ff6d6f8ff6d4
-  MapboxMaps: 977580c694c4fed58ad0d73d2c30818396d53ae2
-  Turf: ce90b58ad96b4f71cf03b1ba80f71753ee586932
+  mapbox_maps_flutter: d51b6d48ba9d8231a77269f1743ec175099d7b15
+  MapboxCommon: 678bfc4b477a804244fd7323c79cc7f2402f844e
+  MapboxCoreMaps: 5cd77c7251dea10903135e8427c788212bd26346
+  MapboxMaps: 2ce57c4ec89d8f05eacfebdd39b01216e0c06168
+  Turf: c9eb11a65d96af58cac523460fd40fec5061b081
   url_launcher_ios: 5334b05cef931de560670eeae103fd3e431ac3fe
 
 PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
