@@ -78,7 +78,7 @@ class _State extends State<GoogleMapPage> {
                     .map((p) => LatLng(p.latitude, p.longitude))
                     .toList(),
                 strokeWidth: 4,
-                fillColor: Colors.green.withOpacity(0.2),
+                fillColor: Colors.green.withValues(alpha: 0.2),
                 strokeColor: Colors.green,
               ),
             )

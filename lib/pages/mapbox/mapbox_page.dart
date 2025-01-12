@@ -125,7 +125,7 @@ class _State extends State<MapboxPage> {
                 )
                 .toList(),
           ),
-          fillColor: Colors.green.withOpacity(0.5).value,
+          fillColor: Colors.green.withValues(alpha: 0.5).value,
           fillOutlineColor: Colors.green.value,
         ),
       ];
